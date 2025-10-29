@@ -2433,6 +2433,11 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/ImageGenTool/quality`.
             public var quality: Components.Schemas.ImageGenTool.QualityPayload?
+            public enum InputFidelityPayload: String, Codable, Hashable, Sendable, CaseIterable {
+                case low = "low"
+                case high = "high"
+            }
+            public var inputFidelity: Components.Schemas.ImageGenTool.InputFidelityPayload?
             /// The size of the generated image. One of `1024x1024`, `1024x1536`,
             /// `1536x1024`, or `auto`. Default: `auto`.
             ///
@@ -2576,6 +2581,7 @@ public enum Components {
                 _type: Components.Schemas.ImageGenTool._TypePayload,
                 model: Components.Schemas.ImageGenTool.ModelPayload? = nil,
                 quality: Components.Schemas.ImageGenTool.QualityPayload? = nil,
+                inputFidelity: Components.Schemas.ImageGenTool.InputFidelityPayload? = nil,
                 size: Components.Schemas.ImageGenTool.SizePayload? = nil,
                 outputFormat: Components.Schemas.ImageGenTool.OutputFormatPayload? = nil,
                 outputCompression: Swift.Int? = nil,
@@ -2587,6 +2593,7 @@ public enum Components {
                 self._type = _type
                 self.model = model
                 self.quality = quality
+                self.inputFidelity = inputFidelity
                 self.size = size
                 self.outputFormat = outputFormat
                 self.outputCompression = outputCompression
@@ -2599,6 +2606,7 @@ public enum Components {
                 case _type = "type"
                 case model
                 case quality
+                case inputFidelity = "input_fidelity"
                 case size
                 case outputFormat = "output_format"
                 case outputCompression = "output_compression"
