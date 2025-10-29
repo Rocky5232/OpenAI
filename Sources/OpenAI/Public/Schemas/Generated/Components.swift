@@ -2652,7 +2652,7 @@ public enum Components {
             ///
             ///
             /// - Remark: Generated from `#/components/schemas/ImageGenToolCall/status`.
-            public var status: Components.Schemas.ImageGenToolCall.StatusPayload
+            public var status: Components.Schemas.ImageGenToolCall.StatusPayload?
             /// The generated image encoded in base64.
             ///
             ///
@@ -2669,7 +2669,7 @@ public enum Components {
             public init(
                 _type: Components.Schemas.ImageGenToolCall._TypePayload,
                 id: Swift.String,
-                status: Components.Schemas.ImageGenToolCall.StatusPayload,
+                status: Components.Schemas.ImageGenToolCall.StatusPayload? = nil,
                 result: Swift.String? = nil,
                 revisedPrompt: Swift.String? = nil
             ) {
