@@ -2650,6 +2650,7 @@ public enum Components {
             ///
             /// - Remark: Generated from `#/components/schemas/ImageGenToolCall/result`.
             public var result: Swift.String?
+            public var revisedPrompt: Swift.String?
             /// Creates a new `ImageGenToolCall`.
             ///
             /// - Parameters:
@@ -2661,18 +2662,21 @@ public enum Components {
                 _type: Components.Schemas.ImageGenToolCall._TypePayload,
                 id: Swift.String,
                 status: Components.Schemas.ImageGenToolCall.StatusPayload,
-                result: Swift.String? = nil
+                result: Swift.String? = nil,
+                revisedPrompt: Swift.String? = nil
             ) {
                 self._type = _type
                 self.id = id
                 self.status = status
                 self.result = result
+                self.revisedPrompt = revisedPrompt
             }
             public enum CodingKeys: String, CodingKey {
                 case _type = "type"
                 case id
                 case status
                 case result
+                case revisedPrompt = "revised_prompt"
             }
         }
         /// Specify additional output data to include in the model response. Currently
